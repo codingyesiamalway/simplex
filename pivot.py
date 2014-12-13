@@ -33,7 +33,7 @@ def getEnter(bv, nbv, b,A,z):
         if z[i + 1] > 0 and ( enterIndex == -1 or nbv[i] < enterIndex):
             enterIndex = nbv[i]
             posIndex = i
-    return enterIndex,posIndex
+    return enterIndex, posIndex
 
 def getLeave(bv, nbv, b,A,z, enterVarIndex, enterPosIndex):
     leaveVar = 99999
