@@ -1,5 +1,3 @@
-__author__ = 'Yu Zhao'
-
 from pivot import *
 
 #fileName = "C:\Users\Yu Zhao\PycharmProjects\untitled\part2TestCases\part2TestCases\unitTests\dict35"

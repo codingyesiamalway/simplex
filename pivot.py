@@ -1,6 +1,3 @@
-__author__ = 'Yu Zhao'
-
-
 #fileName = "C:\Users\Yu Zhao\PycharmProjects\untitled\part1TestCases\part1TestCases\unitTests\dict7"
 def getVariables(fileName):
     line  = 0

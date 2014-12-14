@@ -1,4 +1,3 @@
-__author__ = 'Yu Zhao'
 from Optimize import *
 
 fileName = "C:\Users\Yu Zhao\PycharmProjects\untitled\part3TestCases\part3TestCases\\unitTests\\20\\test"
