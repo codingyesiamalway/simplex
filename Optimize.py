@@ -3,7 +3,7 @@ __author__ = 'Yu Zhao'
 from pivot import *
 
 #fileName = "C:\Users\Yu Zhao\PycharmProjects\untitled\part2TestCases\part2TestCases\unitTests\dict35"
-fileName = "C:\Users\Yu Zhao\PycharmProjects\untitled\part3TestCases\part3TestCases\\unitTests\\10\\test20.dict"
+fileName = "C:\Users\Yu Zhao\PycharmProjects\untitled\part3TestCases\part3TestCases\\assignmentParts\part1.dict"
 
 def oneStepPivot(bv, nbv, b,A,z):
     enterVarIndex,enterPosIndex =  getEnter(bv, nbv, b,A,z)
@@ -101,12 +101,17 @@ def init(bv, nbv, b,A,z):
             aggregatedNewZ.append(sum)
 
     if len(aggregatedNewZ) == 0:
-        return "UNBOUNDED"
-
-    aggregatedNewZ[0] = aggregatedNewZ[0] + z[0]
-    for i in range(1, len(z)):
-        if nbv[i - 1] not in bvOrig:
-            aggregatedNewZ[i] = aggregatedNewZ[i] + z[i]
+        aggregatedNewZ = list(z)
+        for i in range(0, len(z)):
+            if nbv[i - 1] in nbvOrig:
+                index = nbvOrig.index(nbv[i - 1])
+                aggregatedNewZ[index + 1] = z[i]
+    else:
+        aggregatedNewZ[0] = aggregatedNewZ[0] + z[0]
+        for i in range(1, len(z)):
+            if nbv[i - 1] in nbvOrig:
+                index = nbvOrig.index(nbv[i - 1])
+                aggregatedNewZ[index + 1] = aggregatedNewZ[index + 1] + z[i]
     bvFinal, nbvFinal, bFinal, AFinal, zFinal, steps= optimize(bvOrig, nbvOrig, bOrig, AOrig, aggregatedNewZ)
     if zFinal == -1:
         #print "UNBOUNDED"
