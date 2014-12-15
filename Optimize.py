@@ -1,7 +1,5 @@
 from pivot import *
 
-fileName = ""
-
 def oneStepPivot(bv, nbv, b,A,z):
     enterVarIndex,enterPosIndex =  getEnter(bv, nbv, b,A,z)
     if enterVarIndex == -1:
@@ -116,7 +114,7 @@ def init(bv, nbv, b,A,z):
     else:
         return bvFinal, nbvFinal, bFinal, AFinal, zFinal
 
-bv, nbv, b,A,z = getVariables(fileName)
+#bv, nbv, b,A,z = getVariables(fileName)
 # print init(bv, nbv, b, A, z)
 
 
