@@ -1,7 +1,6 @@
 from pivot import *
 
-#fileName = "C:\Users\Yu Zhao\PycharmProjects\untitled\part2TestCases\part2TestCases\unitTests\dict35"
-fileName = "C:\Users\Yu Zhao\PycharmProjects\untitled\part3TestCases\part3TestCases\\assignmentParts\part1.dict"
+fileName = ""
 
 def oneStepPivot(bv, nbv, b,A,z):
     enterVarIndex,enterPosIndex =  getEnter(bv, nbv, b,A,z)
@@ -115,9 +114,9 @@ def init(bv, nbv, b,A,z):
         #print "UNBOUNDED"
         return "UNBOUNDED"
     else:
-        return zFinal[0]
+        return bvFinal, nbvFinal, bFinal, AFinal, zFinal
 
 bv, nbv, b,A,z = getVariables(fileName)
-print init(bv, nbv, b, A, z)
+# print init(bv, nbv, b, A, z)
 
 

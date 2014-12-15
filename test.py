@@ -1,7 +1,7 @@
 from Optimize import *
 
-fileName = "C:\Users\Yu Zhao\PycharmProjects\untitled\part3TestCases\part3TestCases\\unitTests\\20\\test"
-#fileName = "C:\Users\Yu Zhao\PycharmProjects\untitled\part3TestCases\part3TestCases\\assignmentParts\part"
+fileName = ""
+
 for i in range(1, 100):
     fileDict = fileName + str(i) + '.dict'
     fileOut = fileName + str(i) + '.output'
